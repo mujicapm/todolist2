@@ -6,7 +6,7 @@
       "description": "Some text",
       "dateCreated": "5/10/2021",
       "isComplete": false,
-      "dateComplete": ""
+      "dateComplete": null
     },
     {
       "UUID": "22493423",
@@ -14,7 +14,7 @@
       "description": "Some text",
       "dateCreated": "6/10/2021",
       "isComplete": false,
-      "dateComplete": ""
+      "dateComplete": null
     },
     {
       "UUID": "22993423",
@@ -22,7 +22,7 @@
       "description": "Some text",
       "dateCreated": "8/8/2021",
       "isComplete": false,
-      "dateComplete": ""
+      "dateComplete": null
     }
   ],
   "users": [
