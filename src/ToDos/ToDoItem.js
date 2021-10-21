@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import {StateContext} from "../Contexts";
 
 export default function ToDoItem({
-  UUID,
+  id,
   title,
   description,
   dateCreated,
@@ -24,7 +24,7 @@ export default function ToDoItem({
               value="0"
               checked={isComplete}
               onChange={(e) => {
-                dispatch({ type: "TOGGLE_TODO", UUID, isComplete });
+                dispatch({ type: "TOGGLE_TODO", id, isComplete });
               }}
             />
           </div>
@@ -45,7 +45,7 @@ export default function ToDoItem({
               id="delete-item"
               value="Delete"
               onClick={(e) => {
-                dispatch({ type: "DELETE_TODO", UUID });
+                dispatch({ type: "DELETE_TODO", id });
               }}
             />
           </div>

@@ -2,7 +2,6 @@
   "ToDoItems": [
     {
       "id": "223423",
-      "UUID": "223423",
       "title": "Task 1",
       "description": "Some text",
       "dateCreated": "5/10/2021",
@@ -11,7 +10,6 @@
     },
     {
       "id": "223kkk423",
-      "UUID": "22493423",
       "title": "Task 2",
       "description": "Some text",
       "dateCreated": "6/10/2021",
@@ -20,7 +18,6 @@
     },
     {
       "id": "22kjkj23",
-      "UUID": "22993423",
       "title": "Task 3",
       "description": "Some text",
       "dateCreated": "8/8/2021",
@@ -28,22 +25,20 @@
       "dateComplete": null
     },
     {
-      "UUID": "20406022",
-      "title": "Test 5",
-      "description": "Some texts",
+      "title": "test",
+      "description": "test2",
       "dateCreated": "10/21/2021",
       "isComplete": false,
       "dateComplete": null,
-      "id": "8eXhXcJ"
+      "id": "xLdAnKQ"
     },
     {
-      "UUID": "540beba3-b016-4f40-8303-0e216bca849c",
-      "title": "dupe test",
-      "description": "should not see dupe",
+      "title": "test 4",
+      "description": "kjrwlklwj",
       "dateCreated": "10/21/2021",
       "isComplete": false,
       "dateComplete": null,
-      "id": "IUNjjD-"
+      "id": "eONa_hd"
     }
   ],
   "users": [
@@ -51,6 +46,16 @@
       "id": 1,
       "username": "mauro",
       "password": "test"
+    },
+    {
+      "username": "please",
+      "password": "work",
+      "id": 2
+    },
+    {
+      "username": "m",
+      "password": "m3",
+      "id": 3
     }
   ]
 }

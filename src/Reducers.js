@@ -4,6 +4,12 @@ function userReducer(state, action) {
     switch (action.type) {
         case "LOGIN":
         case "REGISTER":
+            // const newUser = {
+            //     id: action.id,
+            //     username: action.username,
+            //     password: action.password,
+            // };
+            // return [newUser, ...state];
             return action.username;
         case "LOGOUT":
             return "";
@@ -17,7 +23,6 @@ function toDoReducer(state, action) {
         case "CREATE_TODO":
             const newPost = {
                 id: action.id,
-                UUID: action.UUID,
                 title: action.title,
                 description: action.description,
                 dateCreated: action.dateCreated,
@@ -28,7 +33,7 @@ function toDoReducer(state, action) {
         case "TOGGLE_TODO":
             if (action.isComplete) {
                 return state.map((toDoItem) =>
-                    toDoItem.UUID === action.UUID
+                    toDoItem.id === action.id
                         ? {
                             ...toDoItem,
                             isComplete: !action.isComplete,
@@ -38,7 +43,7 @@ function toDoReducer(state, action) {
                 );
             } else {
                 return state.map((toDoItem) =>
-                    toDoItem.UUID === action.UUID
+                    toDoItem.id === action.id
                         ? {
                             ...toDoItem,
                             isComplete: !action.isComplete,
@@ -49,7 +54,7 @@ function toDoReducer(state, action) {
             }
         case "DELETE_TODO":
             const newList = state.filter(
-                (toDoItem) => toDoItem.UUID !== action.UUID
+                (toDoItem) => toDoItem.id !== action.id
             );
             return newList;
         case 'FETCH_POSTS':

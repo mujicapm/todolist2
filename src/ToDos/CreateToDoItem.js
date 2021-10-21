@@ -1,5 +1,4 @@
 import React, {useState, useContext, useEffect} from "react";
-import { v4 } from "uuid";
 import handleDateCreated from "../HandleDate";
 import { StateContext } from '../Contexts';
 import {useResource} from "react-request-hook";
@@ -9,16 +8,14 @@ export default function CreatePost({}) {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [dateCreated, setDateCreated] = useState("");
-    const [UUID, setUUID] = useState("");
     const isComplete = false;
     const dateComplete = null;
 
-    const [ ToDoItem, putToDoItem ] = useResource(({UUID, title, description, dateCreated, isComplete, dateComplete}) => ({
+    const [ ToDoItem, putToDoItem ] = useResource(({title, description, dateCreated, isComplete, dateComplete}) => ({
         url: '/ToDoItems',
         method: 'post',
         data:
             {
-                UUID,
                 title,
                 description,
                 dateCreated,
@@ -33,21 +30,17 @@ export default function CreatePost({}) {
     function handleDescription(evt) {
         setDescription(evt.target.value);
     }
-    function handleUUID() {
-        setUUID(v4());
-    }
     function handleOnClick() {
         setDateCreated(handleDateCreated());
-        handleUUID();
     }
 
     function handleCreate() {
-        putToDoItem({UUID, title, description, dateCreated, isComplete, dateComplete})
+        putToDoItem({title, description, dateCreated, isComplete, dateComplete})
     }
 
     useEffect(() => {
         if (ToDoItem && ToDoItem.data) {
-            dispatch({type: "CREATE_TODO", id: ToDoItem.data.id, UUID: ToDoItem.data.UUID, title: ToDoItem.data.title, description: ToDoItem.data.description, dateCreated: ToDoItem.data.dateCreated, isComplete: ToDoItem.data.isComplete, dateComplete: ToDoItem.data.dateComplete});
+            dispatch({type: "CREATE_TODO", id: ToDoItem.data.id, title: ToDoItem.data.title, description: ToDoItem.data.description, dateCreated: ToDoItem.data.dateCreated, isComplete: ToDoItem.data.isComplete, dateComplete: ToDoItem.data.dateComplete});
         }
     }, [ToDoItem])
 
