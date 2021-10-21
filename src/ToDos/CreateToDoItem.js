@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { v4 } from "uuid";
 import handleDateCreated from "../HandleDate";
+import { StateContext } from '../Contexts';
 
-export default function CreatePost({ ToDoItems, dispatch }) {
+export default function CreatePost({}) {
+    const{dispatch} = useContext(StateContext);
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [dateCreated, setDateCreated] = useState("");
