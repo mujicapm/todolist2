@@ -51,6 +51,8 @@ function toDoReducer(state, action) {
                 (toDoItem) => toDoItem.UUID !== action.UUID
             );
             return newList;
+        case 'FETCH_POSTS':
+            return action.ToDoItems
         default:
             return state;
     }

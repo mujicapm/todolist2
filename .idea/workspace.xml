@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="Create Contexts.js file. Testing creating a branch">
+    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="Contexts.js fully implemented. Moving on to splitting out client from server.">
+      <change afterPath="$PROJECT_DIR$/Server/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/routes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SetUpProxy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToDos/ToDoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/ToDoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Logout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/UserBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/UserBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="tsconfig.json" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -83,7 +86,8 @@
       <option name="presentableId" value="Default" />
       <updated>1634765322566</updated>
       <workItem from="1634765325195" duration="544000" />
-      <workItem from="1634765890358" duration="7766000" />
+      <workItem from="1634765890358" duration="13303000" />
+      <workItem from="1634783829865" duration="161000" />
     </task>
     <task id="LOCAL-00001" summary="Had to create new repository as my previous project in IntelliJ ran into all sorts of build issues.">
       <created>1634770043558</created>
@@ -106,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634770572079</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Contexts.js fully implemented. Moving on to splitting out client from server.">
+      <created>1634775818186</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1634775818186</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,22 +127,36 @@
     <MESSAGE value="Had to create new repository as my previous project in IntelliJ ran into all sorts of build issues." />
     <MESSAGE value="Update .txt file for submission. On previous commit, refactored so reducers were in a seperate file" />
     <MESSAGE value="Create Contexts.js file. Testing creating a branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Contexts.js file. Testing creating a branch" />
+    <MESSAGE value="Contexts.js fully implemented. Moving on to splitting out client from server." />
+    <option name="LAST_COMMIT_MESSAGE" value="Contexts.js fully implemented. Moving on to splitting out client from server." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Reducers.js</url>
-          <line>61</line>
-          <properties lambdaOrdinal="-1" />
+          <line>63</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/ToDos/ToDoItem.js</url>
           <line>14</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/App.js</url>
+          <line>12</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/App.js</url>
+          <line>45</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/App.js</url>
+          <line>54</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
