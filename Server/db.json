@@ -1,0 +1,35 @@
+{
+  "ToDoItems": [
+    {
+      "UUID": "223423",
+      "title": "Task 1",
+      "description": "Some text",
+      "dateCreated": "5/10/2021",
+      "isComplete": false,
+      "dateComplete": ""
+    },
+    {
+      "UUID": "22493423",
+      "title": "Task 2",
+      "description": "Some text",
+      "dateCreated": "6/10/2021",
+      "isComplete": false,
+      "dateComplete": ""
+    },
+    {
+      "UUID": "22993423",
+      "title": "Task 3",
+      "description": "Some text",
+      "dateCreated": "8/8/2021",
+      "isComplete": false,
+      "dateComplete": ""
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "mauro",
+      "password": "test"
+    }
+  ]
+}
