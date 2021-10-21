@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="Had to create new repository as my previous project in IntelliJ ran into all sorts of build issues.">
-      <change afterPath="$PROJECT_DIR$/MAURO_MUJICA-PAROD.txt" afterDir="false" />
+    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="Create Contexts.js file. Testing creating a branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDos/ToDoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/ToDoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/UserBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/UserBar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1zmtvE9f4HBaMzECjboKzCOnech" />
@@ -71,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1634765322566</updated>
       <workItem from="1634765325195" duration="544000" />
-      <workItem from="1634765890358" duration="4236000" />
+      <workItem from="1634765890358" duration="7766000" />
     </task>
     <task id="LOCAL-00001" summary="Had to create new repository as my previous project in IntelliJ ran into all sorts of build issues.">
       <created>1634770043558</created>
@@ -80,7 +92,21 @@
       <option name="project" value="LOCAL" />
       <updated>1634770043558</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update .txt file for submission. On previous commit, refactored so reducers were in a seperate file">
+      <created>1634770224598</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1634770224598</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Create Contexts.js file. Testing creating a branch">
+      <created>1634770572079</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1634770572079</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,17 +114,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Had to create new repository as my previous project in IntelliJ ran into all sorts of build issues." />
-    <option name="LAST_COMMIT_MESSAGE" value="Had to create new repository as my previous project in IntelliJ ran into all sorts of build issues." />
+    <MESSAGE value="Update .txt file for submission. On previous commit, refactored so reducers were in a seperate file" />
+    <MESSAGE value="Create Contexts.js file. Testing creating a branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Contexts.js file. Testing creating a branch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/ToDos/CreateToDoItem.js</url>
-          <line>10</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Reducers.js</url>
           <line>61</line>
@@ -107,15 +129,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/ToDos/ToDoItem.js</url>
-          <line>13</line>
+          <line>14</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/ToDos/ToDoList.js</url>
-          <line>8</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
