@@ -16,12 +16,13 @@ function toDoReducer(state, action) {
     switch (action.type) {
         case "CREATE_TODO":
             const newPost = {
+                id: action.id,
                 UUID: action.UUID,
                 title: action.title,
                 description: action.description,
                 dateCreated: action.dateCreated,
-                isComplete: false,
-                dateComplete: undefined,
+                isComplete: action.isComplete,
+                dateComplete: action.dateComplete
             };
             return [newPost, ...state];
         case "TOGGLE_TODO":

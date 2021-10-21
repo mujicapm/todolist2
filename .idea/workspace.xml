@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="Attempting to implement Axios, but unsuccessful thus far. Current issue is TypeError: undefined is not an object (evaluating 'ToDoItems.map') in ToDoList.js">
+    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="Successfully implemented Axios. On step 5 now.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +27,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1zmtvE9f4HBaMzECjboKzCOnech" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -85,7 +90,7 @@
       <workItem from="1634765890358" duration="13303000" />
       <workItem from="1634783829865" duration="161000" />
       <workItem from="1634784942020" duration="960000" />
-      <workItem from="1634810482696" duration="1108000" />
+      <workItem from="1634810482696" duration="6718000" />
     </task>
     <task id="LOCAL-00001" summary="Had to create new repository as my previous project in IntelliJ ran into all sorts of build issues.">
       <created>1634770043558</created>
@@ -115,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634775818186</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Successfully implemented Axios. On step 5 now.">
+      <created>1634814566915</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1634814566916</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,14 +150,15 @@
     <MESSAGE value="Update .txt file for submission. On previous commit, refactored so reducers were in a seperate file" />
     <MESSAGE value="Create Contexts.js file. Testing creating a branch" />
     <MESSAGE value="Contexts.js fully implemented. Moving on to splitting out client from server." />
-    <option name="LAST_COMMIT_MESSAGE" value="Contexts.js fully implemented. Moving on to splitting out client from server." />
+    <MESSAGE value="Successfully implemented Axios. On step 5 now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Successfully implemented Axios. On step 5 now." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Reducers.js</url>
-          <line>63</line>
+          <line>64</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

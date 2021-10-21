@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, {useState, useContext, useEffect} from "react";
 import { v4 } from "uuid";
 import handleDateCreated from "../HandleDate";
 import { StateContext } from '../Contexts';
@@ -10,18 +10,22 @@ export default function CreatePost({}) {
     const [description, setDescription] = useState("");
     const [dateCreated, setDateCreated] = useState("");
     const [UUID, setUUID] = useState("");
+    const isComplete = false;
+    const dateComplete = null;
 
-    // const [ ToDoItem, putToDoItem ] = useResource(({UUID, title, description, dateCreated}) => ({
-    //     url: '/ToDoItems',
-    //     method: 'post',
-    //     data:
-    //         {
-    //             UUID,
-    //             title,
-    //             description,
-    //             dateCreated
-    //         }
-    // }))
+    const [ ToDoItem, putToDoItem ] = useResource(({UUID, title, description, dateCreated, isComplete, dateComplete}) => ({
+        url: '/ToDoItems',
+        method: 'post',
+        data:
+            {
+                UUID,
+                title,
+                description,
+                dateCreated,
+                isComplete,
+                dateComplete
+            }
+    }))
 
     function handleTitle(evt) {
         setTitle(evt.target.value);
@@ -36,15 +40,20 @@ export default function CreatePost({}) {
         setDateCreated(handleDateCreated());
         handleUUID();
     }
+
+    function handleCreate() {
+        putToDoItem({UUID, title, description, dateCreated, isComplete, dateComplete})
+    }
+
+    useEffect(() => {
+        if (ToDoItem && ToDoItem.data) {
+            dispatch({type: "CREATE_TODO", id: ToDoItem.data.id, UUID: ToDoItem.data.UUID, title: ToDoItem.data.title, description: ToDoItem.data.description, dateCreated: ToDoItem.data.dateCreated, isComplete: ToDoItem.data.isComplete, dateComplete: ToDoItem.data.dateComplete});
+        }
+    }, [ToDoItem])
+
     function handleSubmit(e) {
         e.preventDefault();
-        dispatch({
-            type: "CREATE_TODO",
-            UUID,
-            title,
-            description,
-            dateCreated,
-        });
+        handleCreate();
         setTitle("");
         setDescription("");
     }

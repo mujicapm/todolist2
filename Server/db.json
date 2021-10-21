@@ -1,6 +1,7 @@
 {
   "ToDoItems": [
     {
+      "id": "223423",
       "UUID": "223423",
       "title": "Task 1",
       "description": "Some text",
@@ -9,6 +10,7 @@
       "dateComplete": null
     },
     {
+      "id": "223kkk423",
       "UUID": "22493423",
       "title": "Task 2",
       "description": "Some text",
@@ -17,12 +19,31 @@
       "dateComplete": null
     },
     {
+      "id": "22kjkj23",
       "UUID": "22993423",
       "title": "Task 3",
       "description": "Some text",
       "dateCreated": "8/8/2021",
       "isComplete": false,
       "dateComplete": null
+    },
+    {
+      "UUID": "20406022",
+      "title": "Test 5",
+      "description": "Some texts",
+      "dateCreated": "10/21/2021",
+      "isComplete": false,
+      "dateComplete": null,
+      "id": "8eXhXcJ"
+    },
+    {
+      "UUID": "540beba3-b016-4f40-8303-0e216bca849c",
+      "title": "dupe test",
+      "description": "should not see dupe",
+      "dateCreated": "10/21/2021",
+      "isComplete": false,
+      "dateComplete": null,
+      "id": "IUNjjD-"
     }
   ],
   "users": [
