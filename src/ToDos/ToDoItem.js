@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import {StateContext} from "../Contexts";
+import {useResource} from "react-request-hook";
 
 export default function ToDoItem({
   id,
@@ -10,6 +11,17 @@ export default function ToDoItem({
   dateComplete
 }) {
     const {dispatch} = useContext(StateContext);
+
+    const [ ToDoItem, deleteToDoItem ] = useResource((id) => ({
+        url: `/ToDoItems/${encodeURI(id)}`,
+        method: 'delete',
+    }))
+
+    function handleDelete() {
+        deleteToDoItem((id))
+        dispatch({ type: "DELETE_TODO", id })
+    }
+
     return (
         <div>
           <h3>{title}</h3>
@@ -45,7 +57,7 @@ export default function ToDoItem({
               id="delete-item"
               value="Delete"
               onClick={(e) => {
-                dispatch({ type: "DELETE_TODO", id });
+                  handleDelete();
               }}
             />
           </div>
