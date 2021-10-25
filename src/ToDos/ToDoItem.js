@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import {StateContext} from "../Contexts";
 import {useResource} from "react-request-hook";
+import handleDateCreated from "../HandleDate";
 
 export default function ToDoItem({
   id,
@@ -14,7 +15,7 @@ export default function ToDoItem({
 
     const [ ToDoItem, deleteToDoItem ] = useResource((id) => ({
         url: `/ToDoItems/${encodeURI(id)}`,
-        method: 'delete',
+        method: 'delete'
     }))
 
     function handleDelete() {
@@ -22,45 +23,40 @@ export default function ToDoItem({
         dispatch({ type: "DELETE_TODO", id })
     }
 
+    const [toggle, toggleToDo ] = useResource((id, isComplete, dateComplete) => ({
+        url: `/ToDoItems/${encodeURI(id)}`,
+        method: 'patch',
+        data: { isComplete, dateComplete }
+    }))
+
+
+
+    function handleToggle(){
+        if (!isComplete) {
+            dateComplete = handleDateCreated();
+        } else {}
+        dispatch({ type: "TOGGLE_TODO", id: id, isComplete: !isComplete });
+        toggleToDo(id, !isComplete, dateComplete);
+    }
+
+
+
+
     return (
         <div>
-          <h3>{title}</h3>
-          <div>{description}</div>
-          <div>{dateCreated}</div>
-          <div>
-            <label htmlFor="item-complete">Complete:</label>
-            <input
-              type="checkbox"
-              name="item-complete"
-              id="item-complete"
-              value="0"
-              checked={isComplete}
-              onChange={(e) => {
-                dispatch({ type: "TOGGLE_TODO", id, isComplete });
-              }}
-            />
-          </div>
-          <div>
-            <label htmlFor="item-completeTimeStamp">Date Completed:</label>
-            <input
-              type="text"
-              name="item-completeTimeStamp"
-              id="create-completeTimeStamp"
-              value={dateComplete}
-              readOnly
-            />
-          </div>
-          <div>
-            <input
-              type="button"
-              name="delete-item"
-              id="delete-item"
-              value="Delete"
-              onClick={(e) => {
-                  handleDelete();
-              }}
-            />
-          </div>
+            <h3>{title}</h3>
+            <div>{description}</div>
+            <br />
+            <i>Created on {dateCreated}</i>
+            <div>
+                <label htmlFor="item-complete">Complete:</label>
+                <input type="checkbox" name="item-complete" id="item-complete" value="0" checked={isComplete} onChange={(e) => {handleToggle();}}/>
+                <button onClick={(e) => {
+                    handleDelete();
+                }}>Delete Post</button>
+                {isComplete && <span style={{ color: "blue" }}><br/><i>Completed on: {dateComplete}</i><br/></span>}
+            </div>
+                <hr/>
         </div>
-      );
+    );
 }
