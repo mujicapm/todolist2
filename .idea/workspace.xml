@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="Successfully implemented &quot;post&quot; for creating a new todo">
+    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="COMPLETE: 7A - Implement a successful DELETE call over the network and &quot;DELETE_TODO&quot; dispatch call">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +90,8 @@
       <workItem from="1634765890358" duration="13303000" />
       <workItem from="1634783829865" duration="161000" />
       <workItem from="1634784942020" duration="960000" />
-      <workItem from="1634810482696" duration="16242000" />
+      <workItem from="1634810482696" duration="41194000" />
+      <workItem from="1635160537535" duration="4735000" />
     </task>
     <task id="LOCAL-00001" summary="Had to create new repository as my previous project in IntelliJ ran into all sorts of build issues.">
       <created>1634770043558</created>
@@ -137,7 +135,21 @@
       <option name="project" value="LOCAL" />
       <updated>1634827545623</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="COMPLETE: Use the useResource hook in order to GET/POST requests to the mock in order to perform Login and Register.">
+      <created>1634852180468</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1634852180468</updated>
+    </task>
+    <task id="LOCAL-00008" summary="COMPLETE: 7A - Implement a successful DELETE call over the network and &quot;DELETE_TODO&quot; dispatch call">
+      <created>1634863936829</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1634863936829</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,26 +174,17 @@
     <MESSAGE value="Contexts.js fully implemented. Moving on to splitting out client from server." />
     <MESSAGE value="Successfully implemented Axios. On step 5 now." />
     <MESSAGE value="Successfully implemented &quot;post&quot; for creating a new todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Successfully implemented &quot;post&quot; for creating a new todo" />
+    <MESSAGE value="COMPLETE: Use the useResource hook in order to GET/POST requests to the mock in order to perform Login and Register." />
+    <MESSAGE value="COMPLETE: 7A - Implement a successful DELETE call over the network and &quot;DELETE_TODO&quot; dispatch call" />
+    <option name="LAST_COMMIT_MESSAGE" value="COMPLETE: 7A - Implement a successful DELETE call over the network and &quot;DELETE_TODO&quot; dispatch call" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Reducers.js</url>
-          <line>69</line>
+          <line>73</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/ToDos/ToDoItem.js</url>
-          <line>14</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/ToDos/ToDoItem.js</url>
-          <line>21</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

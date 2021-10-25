@@ -4,12 +4,6 @@ function userReducer(state, action) {
     switch (action.type) {
         case "LOGIN":
         case "REGISTER":
-            // const newUser = {
-            //     id: action.id,
-            //     username: action.username,
-            //     password: action.password,
-            // };
-            // return [newUser, ...state];
             return action.username;
         case "LOGOUT":
             return "";
@@ -36,8 +30,8 @@ function toDoReducer(state, action) {
                     toDoItem.id === action.id
                         ? {
                             ...toDoItem,
-                            isComplete: !action.isComplete,
-                            dateComplete: "",
+                            isComplete: action.isComplete,
+                            dateComplete: handleDateCreated(),
                         }
                         : toDoItem
                 );
@@ -46,12 +40,22 @@ function toDoReducer(state, action) {
                     toDoItem.id === action.id
                         ? {
                             ...toDoItem,
-                            isComplete: !action.isComplete,
-                            dateComplete: handleDateCreated(),
+                            isComplete: action.isComplete,
+                            dateComplete: null,
                         }
                         : toDoItem
                 );
             }
+
+
+            // return state.map((ToDoItem, id) => {
+            //     if(id === action.id) {
+            //         ToDoItem.isComplete = action.isComplete;
+            //         ToDoItem.dateComplete = handleDateCreated();
+            //         console.log(ToDoItem)
+            //     }
+            //     return ToDoItem;
+            // })
         case "DELETE_TODO":
             const newList = state.filter(
                 (toDoItem) => toDoItem.id !== action.id

@@ -1,12 +1,12 @@
 {
   "ToDoItems": [
     {
-      "id": "223423",
       "title": "Task 1",
       "description": "Some text",
-      "dateCreated": "5/10/2021",
+      "dateCreated": "10/22/2021",
       "isComplete": false,
-      "dateComplete": null
+      "dateComplete": "10/25/2021",
+      "id": "Tw_1dCe"
     },
     {
       "id": "223kkk423",
@@ -23,22 +23,6 @@
       "dateCreated": "8/8/2021",
       "isComplete": false,
       "dateComplete": null
-    },
-    {
-      "title": "test",
-      "description": "test2",
-      "dateCreated": "10/21/2021",
-      "isComplete": false,
-      "dateComplete": null,
-      "id": "xLdAnKQ"
-    },
-    {
-      "title": "test 4",
-      "description": "kjrwlklwj",
-      "dateCreated": "10/21/2021",
-      "isComplete": false,
-      "dateComplete": null,
-      "id": "eONa_hd"
     }
   ],
   "users": [
@@ -51,11 +35,6 @@
       "username": "please",
       "password": "work",
       "id": 2
-    },
-    {
-      "username": "m",
-      "password": "m3",
-      "id": 3
     }
   ]
 }
