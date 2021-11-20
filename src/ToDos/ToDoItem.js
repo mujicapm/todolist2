@@ -4,14 +4,7 @@ import {useResource} from "react-request-hook";
 import handleDateCreated from "../HandleDate";
 import { Link } from "react-navi";
 
-export default function ToDoItem({
-  id,
-  title,
-  description,
-  dateCreated,
-  isComplete,
-  dateComplete
-}) {
+export default function ToDoItem({id, title, description, dateCreated, isComplete, dateComplete, short = false}) {
     const {dispatch} = useContext(StateContext);
 
     const [ ToDoItem, deleteToDoItem ] = useResource((id) => ({
@@ -40,13 +33,18 @@ export default function ToDoItem({
         toggleToDo(id, !isComplete, dateComplete);
     }
 
-
+    let processedContent = description
+    if (short) {
+        if (description.length > 30) {
+            processedContent = description.substring(0, 30) + '...'
+        }
+    }
 
 
     return (
         <div>
-            <h3>{title}</h3>
-            <div>{description}</div>
+            <Link href={`/todo/${id}`}><h3>{title}</h3></Link>
+            <div>{processedContent}</div>
             <br />
             <i>Created on {dateCreated}</i>
             <div>
@@ -56,6 +54,12 @@ export default function ToDoItem({
                     handleDelete();
                 }}>Delete Post</button>
                 {isComplete && <span style={{ color: "blue" }}><br/><i>Completed on: {dateComplete}</i><br/></span>}
+                {short &&
+                <div>
+                    <br />
+                    <Link href={`/todo/${id}`}>View Full Task</Link>
+                </div>
+                }
             </div>
                 <hr/>
         </div>

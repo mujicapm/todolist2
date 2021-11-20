@@ -3,6 +3,7 @@
 import {useResource} from "react-request-hook";
 import {useEffect} from "react";
 import ToDoItem from "../ToDos/ToDoItem";
+import {Link} from "react-navi";
 
 export default function TodoPage ({ id }) {
 
@@ -19,7 +20,7 @@ export default function TodoPage ({ id }) {
                 ? <ToDoItem {...toDoItem.data} />
                 : 'Loading...'
             }
-            <hr />
+            <div><Link href="/">Go back</Link></div>
         </div>
     )
 }
