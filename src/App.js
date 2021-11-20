@@ -22,33 +22,19 @@ function App() {
         }),
     })
 
-    //TODO On Slide "Defining Routes" - 1:19:50 10/19 Only implmented top left
 
 
 
 return (
       <div>
         <StateContext.Provider value={{state: state, dispatch: dispatch}}>
-            {/*<Container>*/}
-            {/*    <Row>*/}
-            {/*        <Col>*/}
-            {/*            <HeaderBar/>*/}
-            {/*        </Col>*/}
-            {/*    </Row>*/}
-            {/*    <Row>*/}
-            {/*        <Col>*/}
-            {/*            <HomePage/>*/}
-            {/*        </Col>*/}
-            {/*    </Row>*/}
-            {/*</Container>*/}
             <Router routes={routes}>
-                <div style={{ padding: 8 }}>
+                <Container>
                     <HeaderBar/>
                     <hr />
                     <View />
-                </div>
+                </Container>
             </Router>
-
         </StateContext.Provider>
       </div>
     );

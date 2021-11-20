@@ -3,6 +3,7 @@ import {StateContext} from "../Contexts";
 import {useResource} from "react-request-hook";
 import handleDateCreated from "../HandleDate";
 import { Link } from "react-navi";
+import { Card } from 'react-bootstrap'
 
 export default function ToDoItem({id, title, description, dateCreated, isComplete, dateComplete, short = false}) {
     const {dispatch} = useContext(StateContext);
@@ -42,8 +43,11 @@ export default function ToDoItem({id, title, description, dateCreated, isComplet
 
 
     return (
-        <div>
-            <Link href={`/todo/${id}`}><h3>{title}</h3></Link>
+        <Card>
+        <Card.Body>
+            <Card.Title><Link href={`/todo/${id}`}><h3>{title}</h3></Link>
+            </Card.Title>
+            <Card.Text>
             <div>{processedContent}</div>
             <br />
             <i>Created on {dateCreated}</i>
@@ -61,7 +65,8 @@ export default function ToDoItem({id, title, description, dateCreated, isComplet
                 </div>
                 }
             </div>
-                <hr/>
-        </div>
+            </Card.Text>
+        </Card.Body>
+        </Card>
     );
 }

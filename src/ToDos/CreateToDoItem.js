@@ -2,6 +2,8 @@ import React, {useState, useContext, useEffect} from "react";
 import handleDateCreated from "../HandleDate";
 import { StateContext } from '../Contexts';
 import {useResource} from "react-request-hook";
+import { useNavigation } from "react-navi";
+
 
 export default function CreatePost({}) {
     const{dispatch} = useContext(StateContext);
@@ -24,6 +26,8 @@ export default function CreatePost({}) {
             }
     }))
 
+    const navigation = useNavigation()
+
     function handleTitle(evt) {
         setTitle(evt.target.value);
     }
@@ -41,6 +45,8 @@ export default function CreatePost({}) {
     useEffect(() => {
         if (ToDoItem && ToDoItem.data) {
             dispatch({type: "CREATE_TODO", id: ToDoItem.data.id, title: ToDoItem.data.title, description: ToDoItem.data.description, dateCreated: ToDoItem.data.dateCreated, isComplete: ToDoItem.data.isComplete, dateComplete: ToDoItem.data.dateComplete});
+            console.log(ToDoItem.data)
+            navigation.navigate(`/todo/${ToDoItem.data.id}`)
         }
     }, [ToDoItem])
 

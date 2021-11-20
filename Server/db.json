@@ -51,6 +51,11 @@
       "username": "please",
       "password": "work",
       "id": 2
+    },
+    {
+      "username": "newuser1",
+      "password": "test",
+      "id": 3
     }
   ]
 }

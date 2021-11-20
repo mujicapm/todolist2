@@ -1,4 +1,3 @@
-//TODO Add individual todo page and then confirm styling
 
 import {useResource} from "react-request-hook";
 import {useEffect} from "react";
