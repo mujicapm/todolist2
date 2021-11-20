@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import CreateToDoItem from "./ToDos/CreateToDoItem"
 import {mount, route} from "navi";
 import TodoPage from "./pages/ToDoPage";
+import {Router, View } from "react-navi";
 
 
 function App() {
@@ -28,18 +29,26 @@ function App() {
 return (
       <div>
         <StateContext.Provider value={{state: state, dispatch: dispatch}}>
-            <Container>
-                <Row>
-                    <Col>
-                        <HeaderBar/>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <HomePage/>
-                    </Col>
-                </Row>
-            </Container>
+            {/*<Container>*/}
+            {/*    <Row>*/}
+            {/*        <Col>*/}
+            {/*            <HeaderBar/>*/}
+            {/*        </Col>*/}
+            {/*    </Row>*/}
+            {/*    <Row>*/}
+            {/*        <Col>*/}
+            {/*            <HomePage/>*/}
+            {/*        </Col>*/}
+            {/*    </Row>*/}
+            {/*</Container>*/}
+            <Router routes={routes}>
+                <div style={{ padding: 8 }}>
+                    <HeaderBar/>
+                    <hr />
+                    <View />
+                </div>
+            </Router>
+
         </StateContext.Provider>
       </div>
     );

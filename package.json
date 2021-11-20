@@ -16,6 +16,7 @@
     "react-bootstrap": "^2.0.2",
     "react-dom": "^17.0.2",
     "react-nav": "^1.2.0",
+    "react-navi": "^0.14.4",
     "react-request-hook": "^2.1.1",
     "react-scripts": "4.0.3",
     "uuid": "^8.3.2",

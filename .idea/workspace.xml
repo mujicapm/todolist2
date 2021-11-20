@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="Bootstrap React Installed. Part I not complete. Pages directory, headerbar, and homepage introduced. Functionally working as expected. Need to introduce individuals todoitem as a page and then introduce styling.">
-      <change afterPath="$PROJECT_DIR$/src/pages/ToDoPage.js" afterDir="false" />
+    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="HW4 COMPLETE: All requirements met">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ToDoPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ToDoPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Final_v1" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

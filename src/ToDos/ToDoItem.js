@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import {StateContext} from "../Contexts";
 import {useResource} from "react-request-hook";
 import handleDateCreated from "../HandleDate";
+import { Link } from "react-navi";
 
 export default function ToDoItem({
   id,
