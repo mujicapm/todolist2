@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="COMPLETE: 7A - Implement a successful DELETE call over the network and &quot;DELETE_TODO&quot; dispatch call">
+    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="Bootstrap React Installed. Part I not complete. Pages directory, headerbar, and homepage introduced. Functionally working as expected. Need to introduce individuals todoitem as a page and then introduce styling.">
+      <change afterPath="$PROJECT_DIR$/src/pages/ToDoPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Final_v1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,8 +49,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.18.1" />
-    <property name="javascript.nodejs.core.library.typings.version" value="12.20.27" />
+    <property name="javascript.nodejs.core.library.configured.version" value="13.12.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="13.13.52" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -92,6 +94,7 @@
       <workItem from="1634784942020" duration="960000" />
       <workItem from="1634810482696" duration="41194000" />
       <workItem from="1635160537535" duration="4735000" />
+      <workItem from="1636389287666" duration="9858000" />
     </task>
     <task id="LOCAL-00001" summary="Had to create new repository as my previous project in IntelliJ ran into all sorts of build issues.">
       <created>1634770043558</created>
@@ -149,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634863936829</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Bootstrap React Installed. Part I not complete. Pages directory, headerbar, and homepage introduced. Functionally working as expected. Need to introduce individuals todoitem as a page and then introduce styling.">
+      <created>1636399767492</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1636399767492</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +186,8 @@
     <MESSAGE value="Successfully implemented &quot;post&quot; for creating a new todo" />
     <MESSAGE value="COMPLETE: Use the useResource hook in order to GET/POST requests to the mock in order to perform Login and Register." />
     <MESSAGE value="COMPLETE: 7A - Implement a successful DELETE call over the network and &quot;DELETE_TODO&quot; dispatch call" />
-    <option name="LAST_COMMIT_MESSAGE" value="COMPLETE: 7A - Implement a successful DELETE call over the network and &quot;DELETE_TODO&quot; dispatch call" />
+    <MESSAGE value="Bootstrap React Installed. Part I not complete. Pages directory, headerbar, and homepage introduced. Functionally working as expected. Need to introduce individuals todoitem as a page and then introduce styling." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bootstrap React Installed. Part I not complete. Pages directory, headerbar, and homepage introduced. Functionally working as expected. Need to introduce individuals todoitem as a page and then introduce styling." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
