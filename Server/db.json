@@ -37,7 +37,7 @@
       "description": "test",
       "dateCreated": "11/20/2021",
       "isComplete": false,
-      "dateComplete": null,
+      "dateComplete": "11/20/2021",
       "id": "x2jE9qD"
     }
   ],
@@ -56,6 +56,12 @@
       "username": "newuser1",
       "password": "test",
       "id": 3
+    },
+    {
+      "username": "leo",
+      "password": "test",
+      "passwordConfirmation": "test",
+      "id": 4
     }
   ]
 }

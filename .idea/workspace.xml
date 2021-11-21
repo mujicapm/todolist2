@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="App functional. Moved on to Express">
+    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="Running into errors with register between client and back-end">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Logout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User/UserBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/UserBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HeaderBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HeaderBar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637432376382</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Running into errors with register between client and back-end">
+      <created>1637453654424</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1637453654424</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,18 +221,10 @@
     <MESSAGE value="Beginning on v2 of Final. App functional. Introducing links (slide 146)" />
     <MESSAGE value="App functional. Introducing programmatic links (slide 150)" />
     <MESSAGE value="App functional. Moved on to Express" />
-    <option name="LAST_COMMIT_MESSAGE" value="App functional. Moved on to Express" />
+    <MESSAGE value="Running into errors with register between client and back-end" />
+    <option name="LAST_COMMIT_MESSAGE" value="Running into errors with register between client and back-end" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Reducers.js</url>
-          <line>73</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
         <watch expression="dispatch()" language="JavaScript" />

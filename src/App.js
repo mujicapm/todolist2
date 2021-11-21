@@ -12,7 +12,7 @@ import {Router, View } from "react-navi";
 
 function App() {
 
-    const [ state, dispatch ] = useReducer(appReducer, { user: '', ToDoItems: [] })
+    const [ state, dispatch ] = useReducer(appReducer, { user: {}, ToDoItems: [] })
 
     const routes = mount({
         '/': route({view: <HomePage/>}),

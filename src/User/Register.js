@@ -15,7 +15,7 @@ export default function Register({show, handleClose}) {
     const [ status, setStatus] = useState("")
 
     const [ user, register ] = useResource((username, password) => ({
-        url: 'auth/register',
+        url: '/auth/register',
         method: 'post',
         data: { username, password, 'passwordConfirmation': password }
     }))
@@ -91,3 +91,4 @@ export default function Register({show, handleClose}) {
         </Modal>
     );
 }
+
