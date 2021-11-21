@@ -1,12 +1,17 @@
-//TODO Add individual todo page and then confirm styling
 
 import {useResource} from "react-request-hook";
-import {useEffect} from "react";
+import {useContext, useEffect} from "react";
+import ToDoItem from "../ToDos/ToDoItem";
+import {Link} from "react-navi";
+import {StateContext} from "../Contexts";
 
 export default function TodoPage ({ id }) {
 
-    const [ ToDoItem, getToDoItem ] = useResource(() => ({
-        url: `/ToDoItems/${id}`,
+    const {state} = useContext(StateContext);
+
+    const [ toDoItem, getToDoItem ] = useResource(() => ({
+        url: `/todo/${id}`,
+        headers: {"Authorization": `${state.user.access_token}`},
         method: 'get'
     }))
 
@@ -14,11 +19,11 @@ export default function TodoPage ({ id }) {
 
     return (
         <div>
-            {(ToDoItem && ToDoItem.data)
-                ? <ToDoItem {...ToDoItem.data} />
+            {(toDoItem && toDoItem.data)
+                ? <ToDoItem {...toDoItem.data} />
                 : 'Loading...'
             }
-            <hr />
+            <div><Link href="/">Go back</Link></div>
         </div>
     )
 }

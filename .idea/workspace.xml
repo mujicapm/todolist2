@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="Bootstrap React Installed. Part I not complete. Pages directory, headerbar, and homepage introduced. Functionally working as expected. Need to introduce individuals todoitem as a page and then introduce styling.">
-      <change afterPath="$PROJECT_DIR$/src/pages/ToDoPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDos/ToDoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/ToDoList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,23 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Downloads/week9-express-server/app.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Downloads/week9-express-server/models/Post.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Contexts.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SetUpProxy.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Downloads/week9-express-server/models/User.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/User/Login.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Downloads/week9-express-server/routes/post.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ToDos/ToDoItem.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Reducers.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ToDos/ToDoList.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/HomePage.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Downloads/week9-express-server/models/setupMongo.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Downloads/week9-express-server/routes/auth.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1zmtvE9f4HBaMzECjboKzCOnech" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -190,15 +207,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Bootstrap React Installed. Part I not complete. Pages directory, headerbar, and homepage introduced. Functionally working as expected. Need to introduce individuals todoitem as a page and then introduce styling." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Reducers.js</url>
-          <line>73</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">
         <watch expression="dispatch()" language="JavaScript" />

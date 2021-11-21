@@ -1,62 +1,71 @@
-import React, {useContext} from "react";
-import {StateContext} from "../Contexts";
-import {useResource} from "react-request-hook";
-import handleDateCreated from "../HandleDate";
+import React, {useContext, useEffect} from 'react'
+import { Link } from 'react-navi'
+import { Card, Button } from 'react-bootstrap'
 
-export default function ToDoItem({
-  id,
-  title,
-  description,
-  dateCreated,
-  isComplete,
-  dateComplete
+import { StateContext } from './Contexts'
+
+import { useResource } from 'react-request-hook'
+
+
+function ToDoItem({
+  postId, title, content, dateCreated, complete, completedOn, short = false
 }) {
     const {dispatch} = useContext(StateContext);
 
-    const [ ToDoItem, deleteToDoItem ] = useResource((id) => ({
-        url: `/ToDoItems/${encodeURI(id)}`,
-        method: 'delete'
-    }))
+    const [deletedTodo, deleteTodo] = useResource((postId) => ({
+        url: `/posts/${postId}`,
+        method: "delete"
+    }));
 
-    function handleDelete() {
-        deleteToDoItem((id))
-        dispatch({ type: "DELETE_TODO", id })
+    const [toggledTodo, toggleTodo] = useResource((postId, completed) => ({
+        url: `/posts/${postId}`,
+        method: "patch",
+        data: {
+            complete:completed,
+            completedOn: Date.now()
+        }
+    }));
+
+    useEffect(() => {
+        if (deletedTodo && deletedTodo.data && deletedTodo.isLoading === false) {
+            dispatch({type: 'DELETE_POST', postId: postId})
+        }
+    }, [deletedTodo])
+
+    useEffect(() => {
+        if (toggledTodo && toggledTodo.data && toggledTodo.isLoading === false) {
+            dispatch({type: 'TOGGLE_POST', complete:toggledTodo.data.complete, completedOn:toggledTodo.data.completedOn, postId})
+        }
+    }, [toggledTodo])
+
+    let processedContent = content
+
+    if (short) {
+        if (content.length > 30) {
+            processedContent = content.substring(0, 30) + '...'
+        }
     }
-
-    const [toggle, toggleToDo ] = useResource((id, isComplete, dateComplete) => ({
-        url: `/ToDoItems/${encodeURI(id)}`,
-        method: 'patch',
-        data: { isComplete, dateComplete }
-    }))
-
-
-
-    function handleToggle(){
-        if (!isComplete) {
-            dateComplete = handleDateCreated();
-        } else {}
-        dispatch({ type: "TOGGLE_TODO", id: id, isComplete: !isComplete });
-        toggleToDo(id, !isComplete, dateComplete);
-    }
-
-
 
 
     return (
-        <div>
-            <h3>{title}</h3>
-            <div>{description}</div>
-            <br />
-            <i>Created on {dateCreated}</i>
-            <div>
-                <label htmlFor="item-complete">Complete:</label>
-                <input type="checkbox" name="item-complete" id="item-complete" value="0" checked={isComplete} onChange={(e) => {handleToggle();}}/>
-                <button onClick={(e) => {
-                    handleDelete();
-                }}>Delete Post</button>
-                {isComplete && <span style={{ color: "blue" }}><br/><i>Completed on: {dateComplete}</i><br/></span>}
-            </div>
-                <hr/>
-        </div>
-    );
+        <Card>
+            <Card.Body>
+                <Card.Title><Link href={`/post/${postId}`}>{title}</Link>
+                </Card.Title>
+                <Card.Text>
+                    {processedContent}
+                    <i>Created on {dateCreated}</i>
+                </Card.Text>
+
+                <input type="checkbox" checked={complete} onChange={e => {toggleTodo(postId, e.target.checked)}} />
+                <Button variant="link" onClick={(e) => {deleteTodo(postId)}}>Delete Post</Button>
+                {complete && <i>Completed on: {new Date(completedOn).toLocaleDateString('en-us')}</i>}
+                {short && <Link href={`/post/${postId}`}>View full post</Link>}
+
+            </Card.Body>
+        </Card>
+
+    )
 }
+
+export default React.memo(ToDoItem);

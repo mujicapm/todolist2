@@ -1,62 +1,58 @@
-import React, {useState, useContext, useEffect} from "react";
-import handleDateCreated from "../HandleDate";
-import { StateContext } from '../Contexts';
-import {useResource} from "react-request-hook";
+import React, {useState, useEffect, useContext} from 'react'
+import { StateContext } from './Contexts'
+import { useResource } from 'react-request-hook'
+
+import { useNavigation } from 'react-navi'
+
 
 export default function CreatePost({}) {
-    const{dispatch} = useContext(StateContext);
-    const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
-    const [dateCreated, setDateCreated] = useState("");
-    const isComplete = false;
-    const dateComplete = null;
 
-    const [ ToDoItem, putToDoItem ] = useResource(({title, description, dateCreated, isComplete, dateComplete}) => ({
-        url: '/ToDoItems',
+    const [ title, setTitle ] = useState('')
+    const [ content, setContent ] = useState('')
+    const [dateCreated, setDateCreated] = useState("");
+    const navigation = useNavigation()
+
+    const {state, dispatch} = useContext(StateContext)
+    const {user} = state;
+
+    const [ ToDoItem, putToDoItem ] = useResource(({title, content, dateCreated, complete, completedOn}) => ({
+        url: '/todo',
         method: 'post',
+        headers: {"Authorization": `${state.user.access_token}`},
         data:
             {
                 title,
-                description,
+                content,
                 dateCreated,
-                isComplete,
-                dateComplete
+                complete,
+                completedOn,
             }
     }))
 
-    function handleTitle(evt) {
-        setTitle(evt.target.value);
-    }
-    function handleDescription(evt) {
-        setDescription(evt.target.value);
-    }
-    function handleOnClick() {
-        setDateCreated(handleDateCreated());
+
+    function handleTitle (evt) { setTitle(evt.target.value) }
+
+    function handleContent (evt) { setContent(evt.target.value) }
+
+    function handleCreate () {
+        putToDoItem({ title, content})
     }
 
     function handleCreate() {
-        putToDoItem({title, description, dateCreated, isComplete, dateComplete})
+        putToDoItem({title, content, dateCreated, complete, completedOn})
     }
 
     useEffect(() => {
         if (ToDoItem && ToDoItem.data) {
-            dispatch({type: "CREATE_TODO", id: ToDoItem.data.id, title: ToDoItem.data.title, description: ToDoItem.data.description, dateCreated: ToDoItem.data.dateCreated, isComplete: ToDoItem.data.isComplete, dateComplete: ToDoItem.data.dateComplete});
+            dispatch({type: "CREATE_TODO", id: ToDoItem.data.id, title: ToDoItem.data.title, content: ToDoItem.data.content, dateCreated: ToDoItem.data.dateCreated, complete: ToDoItem.data.complete, completedOn: ToDoItem.data.completedOn});
+            console.log(ToDoItem.data)
+            navigation.navigate(`/todo/${ToDoItem.data.id}`)
         }
     }, [ToDoItem])
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        handleCreate();
-        setTitle("");
-        setDescription("");
-    }
 
     return (
-        <form
-            onSubmit={(e) => {
-                handleSubmit(e);
-            }}
-        >
+        <form onSubmit={e => {e.preventDefault(); handleCreate();} }>
             <div>
                 <label htmlFor="create-title">Title:</label>
                 <input
@@ -67,24 +63,8 @@ export default function CreatePost({}) {
                     id="create-title"
                 />
             </div>
-            <div>
-                <label htmlFor="create-description">Description:</label>
-                <input
-                    type="textarea"
-                    value={description}
-                    onChange={handleDescription}
-                    name="create-description"
-                    id="create-description"
-                    rows="5"
-                    cols="33"
-                />
-            </div>
-            <input
-                type="submit"
-                value="Create"
-                onClick={handleOnClick}
-                name="create"
-            />
+            <textarea value={content} onChange={handleContent} />
+            <input type="submit" value="Create" />
         </form>
-    );
+    )
 }

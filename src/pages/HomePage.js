@@ -6,20 +6,27 @@ import {StateContext} from "../Contexts";
 export default function HomePage () {
     const {state, dispatch} = useContext(StateContext)
     const [ ToDoItems, getToDoItems ] = useResource(() => ({
-        url: '/ToDoItems',
-        method: 'get'
+        url: '/todo',
+        method: 'get',
+        headers: {"Authorization": `${state.user.access_token}`}
     }))
 
-    useEffect(getToDoItems, [])
+
+    useEffect(() =>{
+        getToDoItems()
+    }, [state.user.access_token])
+
     useEffect(() => {
-        if (ToDoItems && ToDoItems.data) {
-            dispatch({ type: 'FETCH_POSTS', ToDoItems: ToDoItems.data.reverse() })
+        if (ToDoItems && ToDoItems.isLoading === false && ToDoItems.data) {
+            console.log(ToDoItems.data)
+            dispatch({ type: 'FETCH_POSTS', ToDoItems: ToDoItems.data.ToDoItems })
         }
     }, [ToDoItems])
+    const { data, isLoading } = ToDoItems;
 
     return (
         <>
-            <ToDoList/>
+            {isLoading && 'Tasks are loading...'} <ToDoList/>
         </>
     )
 }

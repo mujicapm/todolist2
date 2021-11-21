@@ -1,17 +1,24 @@
-import React, {useEffect, useReducer} from "react";
-import appReducer from './Reducers';
-import { StateContext } from './Contexts';
-import {Col, Container, Row} from "react-bootstrap";
-import HeaderBar from "./pages/HeaderBar";
-import HomePage from "./pages/HomePage";
-import CreateToDoItem from "./ToDos/CreateToDoItem"
-import {mount, route} from "navi";
+import React, {useState, useReducer, useEffect} from 'react';
+import { mount, route } from 'navi';
+import { Router, View } from 'react-navi';
+
+import { Container } from 'react-bootstrap';
+
+import appReducer from './reducers';
+
+
+import {StateContext } from './Contexts';
+import CreateToDoItem from './ToDos/CreateToDoItem';
+import HeaderBar from './pages/HeaderBar';
+import HomePage from './pages/HomePage';
 import TodoPage from "./pages/ToDoPage";
 
 
 function App() {
 
-    const [ state, dispatch ] = useReducer(appReducer, { user: '', ToDoItems: [] })
+    const [ state, dispatch ] = useReducer(appReducer, { user: {}, posts: [] })
+
+    const {user} = state;
 
     const routes = mount({
         '/': route({view: <HomePage/>}),
@@ -21,28 +28,22 @@ function App() {
         }),
     })
 
-    //TODO On Slide "Defining Routes" - 1:19:50 10/19 Only implmented top left
-
 
 
 return (
-      <div>
-        <StateContext.Provider value={{state: state, dispatch: dispatch}}>
-            <Container>
-                <Row>
-                    <Col>
+    <div>
+
+            <StateContext.Provider value={{state: state, dispatch: dispatch}}>
+                <Router routes={routes}>
+                    <Container>
                         <HeaderBar/>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <HomePage/>
-                    </Col>
-                </Row>
-            </Container>
-        </StateContext.Provider>
-      </div>
-    );
+                        <hr />
+                        <View />
+                    </Container>
+                </Router>
+            </StateContext.Provider>
+    </div>
+)
 }
 
 export default App;
