@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="App functional. Introducing programmatic links (slide 150)">
+    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="App functional. Moved on to Express">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/UserBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/UserBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HeaderBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HeaderBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ToDoPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ToDoPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637428025243</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="App functional. Moved on to Express">
+      <created>1637432376382</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1637432376382</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +206,8 @@
     <MESSAGE value="Bootstrap React Installed. Part I not complete. Pages directory, headerbar, and homepage introduced. Functionally working as expected. Need to introduce individuals todoitem as a page and then introduce styling." />
     <MESSAGE value="Beginning on v2 of Final. App functional. Introducing links (slide 146)" />
     <MESSAGE value="App functional. Introducing programmatic links (slide 150)" />
-    <option name="LAST_COMMIT_MESSAGE" value="App functional. Introducing programmatic links (slide 150)" />
+    <MESSAGE value="App functional. Moved on to Express" />
+    <option name="LAST_COMMIT_MESSAGE" value="App functional. Moved on to Express" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
