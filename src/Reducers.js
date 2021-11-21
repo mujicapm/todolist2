@@ -3,6 +3,10 @@ import handleDateCreated from "./HandleDate";
 function userReducer(state, action) {
     switch (action.type) {
         case "LOGIN":
+            return {
+                'username': action.username,
+                'access_token': action.access_token
+            }
         case 'REGISTER':
             return {
                 'username': action.username,

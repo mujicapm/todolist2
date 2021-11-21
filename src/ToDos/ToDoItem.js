@@ -35,6 +35,7 @@ export default function ToDoItem({id, title, description, dateCreated, isComplet
     }
 
     let processedContent = description
+
     if (short) {
         if (description.length > 30) {
             processedContent = description.substring(0, 30) + '...'

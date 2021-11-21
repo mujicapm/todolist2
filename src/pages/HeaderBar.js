@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import {Col, Container, Row, Navbar, Nav} from "react-bootstrap";
+import {Container, Navbar, Nav} from "react-bootstrap";
 import UserBar from "../User/UserBar";
 import CreateToDoItem from "../ToDos/CreateToDoItem";
 import {StateContext} from "../Contexts";
@@ -7,7 +7,7 @@ import {Link} from "react-navi";
 import Header from "../Header";
 
 
-export default function HeaderBar ({ setTheme }) {
+export default function HeaderBar () {
 
     const {state} = useContext(StateContext);
     const {user} = state;

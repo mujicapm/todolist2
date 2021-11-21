@@ -9,7 +9,7 @@ export default function ToDoList() {
     return (
         <div>
             {ToDoItems.map((p, i) =>
-                <ToDoItem {...p} short={true} key={"ToDoItem-" + i} />)}
+                <ToDoItem {...p} short={true} title={p.title} description={p.description} key={"ToDoItem-" + i} id={p.id}/>)}
         </div>
     );
 }

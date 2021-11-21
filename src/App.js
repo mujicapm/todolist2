@@ -1,7 +1,7 @@
 import React, {useEffect, useReducer} from "react";
 import appReducer from './Reducers';
 import { StateContext } from './Contexts';
-import {Col, Container, Row} from "react-bootstrap";
+import {Container} from "react-bootstrap";
 import HeaderBar from "./pages/HeaderBar";
 import HomePage from "./pages/HomePage";
 import CreateToDoItem from "./ToDos/CreateToDoItem"
@@ -21,9 +21,6 @@ function App() {
             return {view: <TodoPage id={req.params.id}/>}
         }),
     })
-
-
-
 
 return (
       <div>

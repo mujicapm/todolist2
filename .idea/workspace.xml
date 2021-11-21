@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="Running into errors with register between client and back-end">
+    <list default="true" id="f2c4a95e-73a4-4a71-9d4f-f08d973da287" name="Changes" comment="Login and Register working. On to posts. Page ~240">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SetUpProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SetUpProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/ToDoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDos/ToDoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDos/ToDoList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Logout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User/UserBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/User/UserBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/HeaderBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HeaderBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ToDoPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ToDoPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +48,23 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Downloads/week9-express-server/app.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Downloads/week9-express-server/models/Post.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Contexts.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SetUpProxy.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Downloads/week9-express-server/models/User.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/User/Login.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Downloads/week9-express-server/routes/post.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ToDos/ToDoItem.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Reducers.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ToDos/CreateToDoItem.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ToDos/ToDoList.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/HomePage.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Downloads/week9-express-server/models/setupMongo.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Mobile Documents/com~apple~CloudDocs/Downloads/week9-express-server/routes/auth.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1zmtvE9f4HBaMzECjboKzCOnech" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -52,13 +76,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="13.12.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="13.13.52" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.20.37" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.Debug Application">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
@@ -98,6 +126,9 @@
       <workItem from="1634810482696" duration="41194000" />
       <workItem from="1635160537535" duration="4735000" />
       <workItem from="1636389287666" duration="9858000" />
+      <workItem from="1637502349571" duration="8637000" />
+      <workItem from="1637513402047" duration="1353000" />
+      <workItem from="1637515209377" duration="3457000" />
     </task>
     <task id="LOCAL-00001" summary="Had to create new repository as my previous project in IntelliJ ran into all sorts of build issues.">
       <created>1634770043558</created>
@@ -190,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637453654424</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Login and Register working. On to posts. Page ~240">
+      <created>1637457217199</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1637457217199</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +260,8 @@
     <MESSAGE value="App functional. Introducing programmatic links (slide 150)" />
     <MESSAGE value="App functional. Moved on to Express" />
     <MESSAGE value="Running into errors with register between client and back-end" />
-    <option name="LAST_COMMIT_MESSAGE" value="Running into errors with register between client and back-end" />
+    <MESSAGE value="Login and Register working. On to posts. Page ~240" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login and Register working. On to posts. Page ~240" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

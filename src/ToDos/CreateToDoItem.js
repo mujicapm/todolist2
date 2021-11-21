@@ -6,7 +6,8 @@ import { useNavigation } from "react-navi";
 
 
 export default function CreatePost({}) {
-    const{dispatch} = useContext(StateContext);
+    const{state, dispatch} = useContext(StateContext);
+
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [dateCreated, setDateCreated] = useState("");
@@ -14,15 +15,16 @@ export default function CreatePost({}) {
     const dateComplete = null;
 
     const [ ToDoItem, putToDoItem ] = useResource(({title, description, dateCreated, isComplete, dateComplete}) => ({
-        url: '/ToDoItems',
+        url: '/todo',
         method: 'post',
+        headers: {"Authorization": `${state.user.access_token}`},
         data:
             {
                 title,
                 description,
                 dateCreated,
                 isComplete,
-                dateComplete
+                dateComplete,
             }
     }))
 
